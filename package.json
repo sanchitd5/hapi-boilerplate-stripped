@@ -1,7 +1,7 @@
 {
-  "name": "user-onboarding-module",
+  "name": "hapi-boilerplate-stripped",
   "main": "src/entry.js",
-  "description": "A Node based module using Mongodb to onboard user's into a very basic application, secured using JWT authorization",
+  "description": "A Node based basic application using Mongodb",
   "version": "1.0.0",
   "private": false,
   "engines": {
