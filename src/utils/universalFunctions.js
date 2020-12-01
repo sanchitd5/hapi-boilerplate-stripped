@@ -206,6 +206,21 @@ var checkFileExtension = function (fileName) {
     return fileName.substring(fileName.lastIndexOf('.') + 1, fileName.length) || fileName;
 }
 
+const cleanObject = (obj, callback) => {
+    let newObj = Object.keys(obj)
+      .filter(k => obj[k] != undefined && obj[k] != null && obj[k] != '') // Remove undef. and null.
+      .reduce(
+        (newObj, k) =>
+          typeof obj[k] === "object"
+            ? { ...newObj, [k]: cleanObject(obj[k]) } // Recurse.
+            : { ...newObj, [k]: obj[k] }, // Copy value.
+        {}
+      );
+    if (callback instanceof Function)
+      callback(newObj);
+    return newObj;
+  }
+
 const universalFunctions = {
     generateRandomString,
     CryptData,
@@ -225,7 +240,8 @@ const universalFunctions = {
     createArray,
     generateRandomAlphabet,
     getRange,
-    checkFileExtension
+    checkFileExtension,
+    cleanObject
 };
 
 export default universalFunctions;

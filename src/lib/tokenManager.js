@@ -13,8 +13,8 @@
 
 import Services from "../services";
 import Config from "../config";
-var Jwt = require("jsonwebtoken");
-var async = require("async");
+const Jwt = require("jsonwebtoken");
+const async = require("async");
 
 var getTokenFromDB = async function (userId, userType, token) {
   var result;

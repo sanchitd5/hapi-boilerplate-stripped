@@ -1,14 +1,9 @@
 /**
  * Created by Sanchit
  */
-
-'use strict'
-const User = require('./user');
-const ForgetPassword = require('./forgotPasswordRequest');
-const Admin = require('./admin');
+import DemoModel from './demoModel';
 
 export default {
-  User,
-  ForgetPassword,
-  Admin
+  // models to be indexes here
+  DemoModel
 }

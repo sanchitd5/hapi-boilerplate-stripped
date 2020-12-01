@@ -6,7 +6,6 @@ import * as handlebars from "handlebars";
 import mongoose from "mongoose";
 import CONFIG from "../config/index";
 import Path from "path";
-import BootStrap from "../utils/bootStrap";
 import Routes from "../routes";
 
 /**
@@ -20,9 +19,7 @@ class ServerHelper {
 
 
   bootstrap() {
-    BootStrap.bootstrapAdmin(function (err) {
-      if (err) appLogger.debug(err)
-    });
+    // Bootstrap code to be written here
   }
 
   /**

@@ -1,9 +1,5 @@
-import UserService from './userService';
-import ForgetPasswordService from './forgetPasswordService';
-import AdminService from './adminService';
+import GenericService from './genericService';
 
 export default {
-  UserService,
-  ForgetPasswordService,
-  AdminService
+  DemoService: new GenericService('DemoModel'),
 };
